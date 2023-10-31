@@ -4,6 +4,6 @@ for a in range(9):
         if a >= b:
             continue
         if a == 8 and b == 9:
-            print("{0}{1}".format(a,b))
+            print("{0}{1}".format(a, b))
         else:
-            print("{0}{1}, ".format(a,b), end='')
+            print("{0}{1}, ".format(a, b), end='')
