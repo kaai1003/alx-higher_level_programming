@@ -10,8 +10,8 @@ def fizzbuzz():
         if n % 5 == 0 and n % 3 == 0:
             print("FizzBuzz ", end="")
         elif n % 5 == 0:
-            print("Fizz ", end="")
-        elif n % 3 == 0:
             print("Buzz ", end="")
+        elif n % 3 == 0:
+            print("Fizz ", end="")
         else:
             print("{} ".format(n), end="")
