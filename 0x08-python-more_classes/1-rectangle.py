@@ -7,7 +7,12 @@ Define Attributes to Rectangle Class.
 
 
 class Rectangle:
-    """Attributes (width and height) Rectangle class"""
+    """Define Attributes Rectangle class
+    width and height of rectangle
+    Args:
+        width : (int) horiz rectangle dimension
+        width : (int) horiz rectangle dimension
+    """
     def __init__(self, width = 0, height = 0):
         self.width = width
         self.height = height
