@@ -23,6 +23,7 @@ class Rectangle:
     def width(self):
         """get rectangle width"""
         return self.__width
+    
     @width.setter
     def width(self, value):
         """set width of rectangle
@@ -33,7 +34,7 @@ class Rectangle:
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value < 0:
-           raise ValueError("width must be >= 0")
+            raise ValueError("width must be >= 0")
         else:
             self.__width = value
 
@@ -41,6 +42,7 @@ class Rectangle:
     def height(self):
         """get rectangle height"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """set height of rectangle
@@ -54,11 +56,14 @@ class Rectangle:
            raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
     def area(self):
         """return rectangle area"""
         return self.__width * self.__height
+
     def perimeter(self):
         """return perimeter of rectangle"""
+
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.__height) * 2
