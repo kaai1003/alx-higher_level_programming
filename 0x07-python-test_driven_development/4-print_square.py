@@ -14,3 +14,6 @@ def print_square(size):
         raise ValueError("size must be >= 0")
     for r in range(size):
         print("#" * size)
+
+import doctest
+doctest.testfile("tests/4-print_square.txt", verbose=False)

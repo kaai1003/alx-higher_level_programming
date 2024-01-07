@@ -1,0 +1,45 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+This is a Function Test in reStructuredText format.  First import
+``text_indentation`` from the ``5-text_indentation`` module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now test it:
+Test1 : text is string with "." , "?" and ":" delimeters
+
+    >>> text_indentation("test drive : is boring. is that true? i think test is so important")
+    test drive :
+    <BLANKLINE>
+    is boring.
+    <BLANKLINE>
+    is that true?
+    <BLANKLINE>
+    i think test is so important
+
+Test2 : text is string without delimeters
+
+    >>> text_indentation("i think test is so important")
+    i think test is so important
+
+Test3 : text is string with whitespace at beginning and the end
+
+    >>> text_indentation(" test drive : is boring. is that true? i think test is so important ")
+    test drive :
+    <BLANKLINE>
+    is boring.
+    <BLANKLINE>
+    is that true?
+    <BLANKLINE>
+    i think test is so important
+
+Test4 : text is not string
+
+    >>> text_indentation(3421)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
