@@ -1,0 +1,57 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+This is a Function Test in reStructuredText format.  First import
+``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now test it:
+Test1 : a and b inputs are integers
+
+    >>> add_integer(100, 2)
+    102
+
+Test2 : a is negative and b positive
+
+    >>> add_integer(-100, 2)
+    -98
+
+Test3 : b is negative
+
+    >>> add_integer(100, -2)
+    98
+
+Test4 : a input is float 
+
+    >>> add_integer(100.3, 2)
+    102
+
+Test5 : b input is float
+
+    >>> add_integer(100 , 2.3)
+    102
+
+Test6 : no inputs (None)
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Test7 : input b is string
+
+    >>> add_integer(100, "alx")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+Test8 : input a is string
+
+    >>> add_integer("catch", 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
