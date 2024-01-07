@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""addition of 2 numbers module"""
+
+
 def add_integer(a, b=98):
     """function do the addition of two numbers
         and return the result a + b
@@ -15,7 +18,3 @@ def add_integer(a, b=98):
     elif type(b) == float:
         b = int(b)
     return int(a + b)
-
-import doctest
-if __name__ == '__main__':
-    doctest.testfile("tests/0-add_integer.txt")

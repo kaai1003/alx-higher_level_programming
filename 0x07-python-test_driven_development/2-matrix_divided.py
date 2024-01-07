@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """matrix division module"""
+
+
 def matrix_divided(matrix, div):
     """a function that devid each member of matrix 
         return the new matrix
