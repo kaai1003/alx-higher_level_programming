@@ -52,9 +52,17 @@ Test4 : check that value greater then 0
         ...
     ValueError: width must be greater than 0
 
-Test5 : test area method
+Test5 : test area method and pass some args to it
 
     >>> bg.area()
     Traceback (most recent call last):
         ...
     Exception: area() is not implemented
+    >>> bg.area(3)
+    Traceback (most recent call last):
+        ...
+    TypeError: area() takes 1 positional argument but 2 were given
+    >>> bg.area(3, 4)
+    Traceback (most recent call last):
+        ...
+    TypeError: area() takes 1 positional argument but 3 were given
