@@ -35,3 +35,10 @@ Test4 : size is not integer
     Traceback (most recent call last):
         ...
     TypeError: size must be an integer
+
+Test5 : missing argument
+
+    >>> print_square()
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
