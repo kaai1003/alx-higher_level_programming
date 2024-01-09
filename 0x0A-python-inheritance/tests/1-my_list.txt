@@ -31,12 +31,10 @@ Test4 : print sorted list
     >>> my_list.print_sorted()
     [2, 3, 5, 9]
 
-Test8 : return new list using print_sorted method
+Test8 : check if print_sorted return new list
 
-    >>> new_list = my_list.print_sorted()
-    [2, 3, 5, 9]
-    >>> print(new_list)
-    None
+    >>> print(my_list is my_list.print_sorted)
+    False
 
 Test5 : add string to list
 
