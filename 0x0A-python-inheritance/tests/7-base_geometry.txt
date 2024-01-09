@@ -66,3 +66,11 @@ Test5 : test area method and pass some args to it
     Traceback (most recent call last):
         ...
     TypeError: area() takes 1 positional argument but 3 were given
+
+Test6 : check if object is BaseGeometry Class
+
+    >>> type(bg) is BaseGeometry
+    True
+    >>> new_bg = ""
+    >>> print(type(new_bg) is BaseGeometry)
+    False
