@@ -28,6 +28,10 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """Rectangle Class inherate from BaseGeometry
+    
+    Attributes:
+        width (int): private attribute width
+        heigth (int): private attribute heigth
     """
 
     def __init__(self, width, heigth):
@@ -37,7 +41,7 @@ class Rectangle(BaseGeometry):
             width (int): width of rectangle
             heigth (int): heigth of rectangle
         """
-        BaseGeometry().integer_validator("width", width)
+        self.integer_validator("width", width)
         self.__width = width
-        BaseGeometry().integer_validator("heigth", heigth)
+        self.integer_validator("heigth", heigth)
         self.__heigth = heigth
