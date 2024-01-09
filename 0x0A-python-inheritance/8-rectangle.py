@@ -25,5 +25,19 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
-    """Class Rectangle"""
+    """Rectangle Class inherate from BaseGeometry
+    """
+
+    def __init__(self, width, heigth):
+        """init magic method
+
+        Args:
+            width (int): width of rectangle
+            heigth (int): heigth of rectangle
+        """
+        if super().integer_validator("width", width) is None:
+            self.__width = width
+        if super().integer_validator("heigth", heigth) is None:
+            self.__heigth = heigth
