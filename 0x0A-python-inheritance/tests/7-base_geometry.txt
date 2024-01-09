@@ -14,7 +14,7 @@ Test1 : create new object from BaseGeometry
 
     >>> bg = BaseGeometry()
 
-Test2 : correct inputs + empty name
+Test2 : correct inputs + empty string name
 
     >>> bg.integer_validator("my_int", 12)
     >>> bg.integer_validator("width", 89)
@@ -47,3 +47,14 @@ Test4 : check that value greater then 0
     Traceback (most recent call last):
         ...
     ValueError: width must be greater than 0
+    >>> bg.integer_validator("width", -5)
+    Traceback (most recent call last):
+        ...
+    ValueError: width must be greater than 0
+
+Test5 : test area method
+
+    >>> bg.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
