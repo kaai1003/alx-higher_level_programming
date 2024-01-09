@@ -51,6 +51,8 @@ Test6 : sort list with string
 
 Test7 : sort empty list
 
-    >>> list2 = MyList()
+    >>> list2 = []
     >>> list2.print_sorted()
-    []
+    Traceback (most recent call last):
+        ...
+    AttributeError: 'list' object has no attribute 'print_sorted'
