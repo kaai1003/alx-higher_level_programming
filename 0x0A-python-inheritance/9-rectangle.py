@@ -45,3 +45,13 @@ class Rectangle(BaseGeometry):
         self.__width = width
         super().integer_validator("heigth", heigth)
         self.__heigth = heigth
+
+    def area(self):
+        """Rectangle area calculation
+        return rectangle area
+        """
+        return self.__width * self.__heigth
+
+    def __str__(self):
+        """print rectangle description"""
+        return "[Rectangle] {}/{}".format(self.__width, self.__heigth)
