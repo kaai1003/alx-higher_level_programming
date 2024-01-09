@@ -26,4 +26,4 @@ def text_indentation(text):
         p += c
     if c == " ":
         p = p[:-1]
-    print(p)
+    print(p, end='')
