@@ -27,6 +27,3 @@ def text_indentation(text):
     if c == " ":
         p = p[:-1]
     print(p)
-
-import doctest
-doctest.testfile("tests/5-text_indentation.txt", verbose=False)
