@@ -2,9 +2,6 @@
 """class object json Module"""
 
 
-import json
-
-
 def class_to_json(obj):
     """return json representation
     of class object
@@ -13,4 +10,4 @@ def class_to_json(obj):
         obj (object): class object
     """
 
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
