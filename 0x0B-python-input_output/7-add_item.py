@@ -12,13 +12,8 @@ new_list = []
 i = 1
 
 if os.path.exists(filename):
-    args_list = load_from_json_file(filename)
-    new_list = args_list[:]
-    while i < len(sys.argv):
-        new_list.append(sys.argv[i])
-        i += 1
-else:
-    while i < len(sys.argv):
+    new_list = load_from_json_file(filename)
+while i < len(sys.argv):
         new_list.append(sys.argv[i])
         i += 1
 save_to_json_file(new_list, filename)
