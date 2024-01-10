@@ -18,9 +18,7 @@ if os.path.exists(filename):
         new_list.append(sys.argv[i])
         i += 1
 else:
-    with open(filename, mode="+w") as arg_file:
-        while i < len(sys.argv):
-            new_list.append(sys.argv[i])
-            i += 1
-
+    while i < len(sys.argv):
+        new_list.append(sys.argv[i])
+        i += 1
 save_to_json_file(new_list, filename)
