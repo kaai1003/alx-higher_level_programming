@@ -26,15 +26,15 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """JSON string representation
-
         Args:
             list_dictionaries : list ditionaries
         """
-        list_dict = []
         if list_dictionaries:
+            list_dict = []
             for dict in list_dictionaries:
                 list_dict.append(dict)
-        return json.dumps(list_dict)
+            return json.dumps(list_dict)
+        return "[]"
 
     @classmethod
     def save_to_file(cls, list_objs):
