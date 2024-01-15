@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """Rectangle Class module"""
 from models.base import Base
+import json
+import os
+import sys
 
 
 class Rectangle(Base):

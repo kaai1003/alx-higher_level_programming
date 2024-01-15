@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """Square Class module"""
 from models.rectangle import Rectangle
+import json
+import os
+import sys
 
 
 class Square(Rectangle):
