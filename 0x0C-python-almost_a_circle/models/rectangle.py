@@ -7,6 +7,9 @@ import sys
 
 
 class Rectangle(Base):
+    """Class Rectangle definition"""
+
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Rectangle constructor
 
