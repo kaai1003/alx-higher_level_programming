@@ -68,6 +68,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """create new instance based on dict
+
+        Args:
+            dictionary (dict): dictionary of attributes
         """
         dummy = cls(1, 1)
         dummy.update(**dictionary)
