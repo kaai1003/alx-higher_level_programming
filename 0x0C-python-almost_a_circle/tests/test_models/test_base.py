@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """unittest Base Class module"""
-
-
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
@@ -9,7 +7,6 @@ from models.rectangle import Rectangle
 
 class TestBase(unittest.TestCase):
     """UnitTest Base Class Module"""
-
     def test_id(self):
         """test different value of id"""
 
@@ -43,10 +40,10 @@ class TestBase(unittest.TestCase):
                                       'width': 10})
         json_dictionary = Base.to_json_string([dictionary])
         self.assertEqual(json_dictionary, str([{'x': 2,
-                                            'y': 8,
-                                            'id': 4,
-                                            'height': 7,
-                                            'width': 10}]))
+                                                'y': 8,
+                                                'id': 4,
+                                                'height': 7,
+                                                'width': 10}]))
 
     def test_save_tofile(self):
         """test save to file method"""
@@ -56,6 +53,10 @@ class TestBase(unittest.TestCase):
 
         with open("Rectangle.json", "r") as file:
             self.assertEqual(file.read(), [{"x": 2, "y": 8, "id": 1,
-                                     "height": 7, "width": 10},
-                                     {"x": 0, "y": 0, "id": 2,
-                                     "height": 4, "width": 2}])
+                                            "height": 7, "width": 10},
+                                           {"x": 0, "y": 0, "id": 2,
+                                            "height": 4, "width": 2}])
+
+
+if __name__ == "__main__":
+    unittest.main()

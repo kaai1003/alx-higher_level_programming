@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """unittest Square Class module"""
-
-
 import unittest
 from unittest.mock import patch
 from io import StringIO
@@ -10,7 +8,6 @@ from models.square import Square
 
 class TestSquare(unittest.TestCase):
     """UnitTest Square Class Module"""
-
     def test_new_Square(self):
         """test normal integer attributes"""
 
@@ -164,3 +161,7 @@ class TestSquare(unittest.TestCase):
                                    'size': 10,
                                    'y': 1})
         self.assertEqual(str(type(dict_s1)), "<class 'dict'>")
+
+
+if __name__ == "__main__":
+    unittest.main()

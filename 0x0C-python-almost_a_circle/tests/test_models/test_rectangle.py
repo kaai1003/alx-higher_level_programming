@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """unittest Rectangle Class module"""
-
-
 import unittest
 from unittest.mock import patch
 from io import StringIO
@@ -10,7 +8,6 @@ from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
     """UnitTest Rectangle Class Module"""
-
     def test_new_Rectangle(self):
         """test normal integer attributes"""
 
@@ -163,3 +160,7 @@ class TestRectangle(unittest.TestCase):
                                    'height': 2,
                                    'width': 10})
         self.assertEqual(str(type(dict_r1)), "<class 'dict'>")
+
+
+if __name__ == "__main__":
+    unittest.main()
