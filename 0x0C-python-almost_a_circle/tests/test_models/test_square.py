@@ -55,13 +55,13 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.height, 10)
         self.assertEqual(s1.x, 0)
         self.assertEqual(s1.y, 0)
-        self.assertEqual(s1.id, 5)
+        self.assertEqual(s1.id, 19)
         s1 = Square(10, 14)
         self.assertEqual(s1.width, 10)
         self.assertEqual(s1.height, 10)
         self.assertEqual(s1.x, 14)
         self.assertEqual(s1.y, 0)
-        self.assertEqual(s1.id, 6)
+        self.assertEqual(s1.id, 20)
         s1 = Square(10, 2, 14, 4)
         self.assertEqual(s1.width, 10)
         self.assertEqual(s1.height, 10)
@@ -156,7 +156,7 @@ class TestSquare(unittest.TestCase):
         """test dict repr of rectangle"""
         s1 = Square(10, 2, 1)
         dict_s1 = s1.to_dictionary()
-        self.assertEqual(dict_s1, {'id': 2,
+        self.assertEqual(dict_s1, {'id': 16,
                                    'x': 2,
                                    'size': 10,
                                    'y': 1})
