@@ -45,12 +45,12 @@ class Base:
             list_objs (object): list of objects
         """
         new_list = []
+        filename = cls.__name__ + ".json"
         if list_objs:
-            filename = cls.__name__ + ".json"
             for obj in list_objs:
                 dict = obj.to_dictionary()
                 new_list.append(dict)
-            json_dict = cls.to_json_string(new_list)
+        json_dict = cls.to_json_string(new_list)
         with open(filename, mode="w") as jsonfile:
             jsonfile.write(json_dict)
 
