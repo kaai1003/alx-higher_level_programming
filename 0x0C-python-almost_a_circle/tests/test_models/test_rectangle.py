@@ -99,6 +99,10 @@ class TestRectangle(unittest.TestCase):
         r8 = Rectangle(2, 4)
         r8.display()
         self.assertEqual(stdout.getvalue(), "##\n" * 4)
+        stdout.
+        r8.update(x=2)
+        r8.display()
+        self.assertEqual(stdout.getvalue(), "##\n" * 4)
 
     @patch('sys.stdout', new_callable=StringIO)
     def test_str_method(self, stdout):

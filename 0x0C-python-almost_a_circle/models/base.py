@@ -3,6 +3,7 @@
 import json
 import os
 import sys
+import csv
 
 
 class Base:
@@ -95,3 +96,39 @@ class Base:
                         new_inst = cls.create(**n)
                         list_inst.append(new_inst)
         return list_inst
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save object attributes to csv file
+
+        Args:
+            list_objs (object): list of class object
+        """
+        if cls.__name__ == "Rectangle":
+            filename = "Rectangle.csv"
+            obj_fields = ['id', 'width', 'height', 'x', 'y']
+        if cls.__name__ == "Square":
+            filename = "Square.csv"
+            obj_fields = ['id', 'size', 'x', 'y']
+        with open(filename, mode='w') as csv_file:
+            set_to_csv = csv.DictWriter(csv_file, fieldnames=obj_fields)
+            set_to_csv.writeheader()
+            if list_objs:
+                for obj in list_objs:
+                    obj_dict = obj.to_dictionary()
+                    set_to_csv.writerow(obj_dict)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """load attributes object from csv file"""
+        filename = cls.__name__ + ".csv"
+        list_obj = []
+        if os.path.exists(filename):
+            with open(filename, mode='r') as csv_file:
+                obj_dict = csv.DictReader(csv_file, )
+                for obj in obj_dict:
+                    for key in obj:
+                        obj[key] = int(obj[key])
+                    new_obj = cls.create(**obj)
+                    list_obj.append(new_obj)
+        return list_obj
