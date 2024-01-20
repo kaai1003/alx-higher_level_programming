@@ -4,6 +4,7 @@ import json
 import os
 import sys
 import csv
+import turtle
 
 
 class Base:
@@ -132,3 +133,37 @@ class Base:
                     new_obj = cls.create(**obj)
                     list_obj.append(new_obj)
         return list_obj
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """_summary_
+
+        Args:
+            list_rectangles (_type_): _description_
+            list_squares (_type_): _description_
+        """
+        turtle.bgcolor("yellow")
+        draw_board = turtle.getscreen()
+        draw_pen = turtle.Turtle()
+        if list_rectangles:
+            for rect in list_rectangles:
+                draw_pen.pen(pencolor="red", pensize=3, speed=1)
+                draw_pen.penup()
+                draw_pen.goto(rect.x, rect.y)
+                draw_pen.pendown()
+                draw_pen.forward(rect.width)
+                draw_pen.right(90)
+                draw_pen.forward(rect.height)
+                draw_pen.right(90)
+                draw_pen.forward(rect.width)
+                draw_pen.right(90)
+                draw_pen.forward(rect.height)
+        if list_squares:
+            for sqr in list_squares:
+                draw_pen.pen(pencolor="green", pensize=3, speed=1)
+                draw_pen.penup()
+                draw_pen.goto(sqr.x, sqr.y)
+                draw_pen.pendown()
+                for n in range(4):
+                    draw_pen.forward(sqr.size)
+                    draw_pen.right(90)
