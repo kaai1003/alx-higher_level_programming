@@ -4,7 +4,7 @@ if (process.argv.length < 4) {
 } else {
   let b = process.argv[2];
   let sb = -Infinity;
-  for (let i = 3; i < process.argv.length; i++) {
+  for (let i = 2; i < process.argv.length; i++) {
     if (process.argv[i] > b) {
       sb = b;
       b = process.argv[i];
