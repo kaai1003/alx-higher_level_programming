@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """send http request using Request"""
-import urllib
 import requests
 
 
