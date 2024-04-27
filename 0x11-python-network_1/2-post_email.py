@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """send POST request to URL with email as parm
 and display the body of the response
-Usage : script_name URL
+Usage : script_name URL email
 """
 import sys
 import urllib
