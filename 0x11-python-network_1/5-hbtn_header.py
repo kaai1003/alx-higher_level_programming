@@ -2,7 +2,6 @@
 """send http request using Request
 display variable X-Request-Id
 Usage: script_name URL"""
-import urllib
 import requests
 import sys
 
