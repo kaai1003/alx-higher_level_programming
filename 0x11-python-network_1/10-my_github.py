@@ -5,7 +5,10 @@ import sys
 
 
 url = "https://api.github.com/user"
-r = requests.get(url, auth=(sys.argv[1], sys.argv[2]))
-r_dict = r.json()
-print(r_dict)
-print(r_dict['id'])
+try:
+    r = requests.get(url, auth=(sys.argv[1], sys.argv[2]))
+    r.raise_for_status()
+    r_dict = r.json()
+    print(r_dict['id'])
+except Exception as e:
+    print("None")
