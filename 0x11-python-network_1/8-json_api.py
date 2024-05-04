@@ -14,8 +14,8 @@ if __name__ == "__main__":
         q = {'q': sys.argv[1]}
     try:
         r = requests.post(url, data=q)
+        r.status_code
         r_dict = r.json()
-        r.raise_for_status()
         if not r_dict:
             print("No result")
         else:
