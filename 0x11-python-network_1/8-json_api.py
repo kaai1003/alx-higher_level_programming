@@ -15,6 +15,7 @@ if __name__ == "__main__":
     try:
         r = requests.post(url, data=q)
         r.status_code
+        print(r.status_code)
         r_dict = r.json()
         if not r_dict:
             print("No result")
