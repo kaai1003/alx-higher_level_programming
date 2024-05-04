@@ -14,12 +14,11 @@ if __name__ == "__main__":
         q = {'q': sys.argv[1]}
     try:
         r = requests.post(url, data=q)
-        r.status_code
-        print(r.status_code)
+        r.raise_for_status()
         r_dict = r.json()
         if not r_dict:
             print("No result")
         else:
             print("[{}] {}".format(r_dict['id'], r_dict['name']))
-    except requests.HTTPError as http_err:
+    except ValueError as e:
         print("Not a valid JSON")
