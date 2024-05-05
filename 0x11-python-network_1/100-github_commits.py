@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""list 10 commits of repo"""
+"""list 10 commits of repo
+Usage: script_name OWNER REPO
+"""
 import requests
 import sys
 
