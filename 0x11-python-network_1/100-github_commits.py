@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""list 10 commits of repo
-Usage: script_name OWNER REPO
+"""list 10 commits from REPO
+Usage: script OWNER REPO
 """
+
 import requests
 import sys
 
 
 url = "https://api.github.com/repos/{}/{}/commits".format(sys.argv[1],
-                                                         sys.argv[2])
+                                                          sys.argv[2])
 try:
     r = requests.get(url)
     r_dict = r.json()
