@@ -2,7 +2,7 @@
 const request = require('request');
 if (process.argv.length === 3) {
   const url = process.argv[2];
-  const id = 'https://swapi-api.alx-tools.com/api/people/18/';
+  const id = '18';
   let count = 0;
   request(url, function (err, response, body) {
     if (!err) {
@@ -11,7 +11,7 @@ if (process.argv.length === 3) {
       for (const episode of details) {
         const arr = episode.characters;
         for (const char of arr) {
-          if (char === id) {
+          if (char.split('/')[5] === id) {
             count += 1;
           }
         }
